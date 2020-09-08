@@ -1,0 +1,803 @@
+{% extends 'layouts/master.twig' %}
+
+{% block content %}
+
+<!-- shop-page-wrapper start -->
+<div class="shop-page-wrapper">
+    <div class="shop-category-area shop-category-bg">
+        <!-- shop-category-titel start-->
+        <div class="shop-category-titel">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2>Shop</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- shop-category-titel end -->
+    </div>
+    <!-- breadcrumb-area start  -->
+    <div class="breadcrumb-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="breadcrumb-list">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item active">Shop</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb-area end  -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-lg-12 shop-add-to-cart-dump">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- shop-page-main-content start -->
+    <div class="shop-page-main-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 order-1 order-lg-1">
+                    <!-- sidebar-shop start -->
+                    <div class="sidebar-shop">
+                        <!-- sinlge-block-categories start -->
+                        <div class="sinlge-block-categories mb-30">
+                            <div class="secton-titel-three">
+                                <h3>Shop by Category</h3>
+                            </div>
+                            <!-- category-sub-menu start -->
+                            <div class="category-sub-menu">
+                                <ul>
+                                    {# <li class="has-sub"><a href="#">Baking Mats</a>
+                                        <ul>
+                                            <li><a href="#">Accessories</a></li>
+                                            <li><a href="#">Aprons</a></li>
+                                            <li><a href="#">Tea Accessories</a></li>
+                                            <li><a href="#">Mandoline Slicers</a></li>
+                                        </ul>
+                                    </li> #}
+                                {# {{ categories[0] }} #}
+                                {% if categories %}
+                                    {% for category in categories %}
+                                        <li class="has-no-sub"><a href="#">{{ category.category_name }}</a></li>
+                                    {% else %}
+                                        <li class="has-no-sub"><a href="#">No Category Found</a></li>
+                                    {% endfor %}
+                                {% endif %}
+                                </ul>
+                            </div>
+                            <!-- category-sub-menu end -->
+                        </div>
+                        <!-- sinlge-block-categories end -->
+                        <!-- sinlge-block-categories start -->
+                        <!--
+                        <div class="sinlge-block-categories mt-30">
+                            <!-- one-sale-area start --
+                            <div class="one-sale-area">
+                                <div class="secton-titel-three">
+                                    <h3> One sale</h3>
+                                </div>
+                                <div class="category-item-active owl-carousel">
+                                    <div class="category-item-inner">
+                                        <!-- category-item start --
+                                        <div class="category-item">
+                                            <div class="product-img">
+                                                <a href="#"><img src="<?php echo Config::get('app.url'); ?>/assets/img/product/s1.jpg" alt=""></a>
+                                            </div>
+                                            <div class="single-product-info">
+                                                <h3><a href="shop.html">Autumn on the new middle-aged men's clothes hot V-neck long-sleeved sweater</a></h3>
+                                                <div class="product-price-box">
+                                                    <span class="new-price">$50.99</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- category-item end --
+                                        <!-- category-item start --
+                                        <div class="category-item">
+                                            <div class="product-img">
+                                                <a href="#"><img src="<?php echo Config::get('app.url'); ?>/assets/img/product/s2.jpg" alt=""></a>
+                                            </div>
+                                            <div class="single-product-info">
+                                                <h3><a href="shop.html">Comfortable casual Slim O neck long-sleeved sweater</a></h3>
+                                                <div class="product-price-box">
+                                                    <span class="old-price">$20.50</span>
+                                                    <span class="new-price">$10.99</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- category-item end --
+                                        <!-- category-item start --
+                                        <div class="category-item">
+                                            <div class="product-img">
+                                                <a href="#"><img src="<?php echo Config::get('app.url'); ?>/assets/img/product/s3.jpg" alt=""></a>
+                                            </div>
+                                            <div class="single-product-info">
+                                                <h3><a href="shop.html">2018 Mens Turtleneck Sweaters Solid green Men's Jumpers Knitted Pullover </a></h3>
+                                                <div class="product-price-box">
+                                                    <span class="old-price">$26.30</span>
+                                                    <span class="discount">-10%</span>
+                                                    <span class="new-price">$24.03</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- category-item end --
+                                    </div>
+                                    <div class="category-item-inner">
+                                        <!-- category-item start --
+                                        <div class="category-item">
+                                            <div class="product-img">
+                                                <a href="#"><img src="<?php echo Config::get('app.url'); ?>/assets/img/product/s5.jpg" alt=""></a>
+                                            </div>
+                                            <div class="single-product-info">
+                                                <h3><a href="shop.html">Autumn on the new middle-aged men's clothes hot V-neck long-sleeved sweater</a></h3>
+                                                <div class="product-price-box">
+                                                    <span class="new-price">$50.99</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- category-item end --
+                                        <!-- category-item start --
+                                        <div class="category-item">
+                                            <div class="product-img">
+                                                <a href="#"><img src="<?php echo Config::get('app.url'); ?>/assets/img/product/s6.jpg" alt=""></a>
+                                            </div>
+                                            <div class="single-product-info">
+                                                <h3><a href="shop.html">Comfortable casual Slim O neck long-sleeved sweater</a></h3>
+                                                <div class="product-price-box">
+                                                    <span class="old-price">$20.50</span>
+                                                    <span class="new-price">$10.99</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- category-item end --
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- one-sale-area end --
+                        </div>
+                        -->
+                        <!-- sinlge-block-categories end -->
+                    </div>
+                    <!-- sidebar-shop end -->
+                </div>
+                <div class="col-lg-9 order-2 order-lg-2">
+                    <!-- archive-border-area start -->
+                    <div class="archive-border-area">
+                        <!-- shop-item-filter start -->
+                        <div class="shop-item-filter">
+                            <!-- shop-item-filter-list start -->
+                            <ul role="tablist" class="nav shop-item-filter-list">
+                                <li role="presentation" class="active"><a href="#grid-view" aria-controls="grid-view" role="tab" data-toggle="tab" class="active show" aria-selected="true"><i class="fa fa-th"></i></a></li>
+                                <li role="presentation"><a href="#list-view" aria-controls="list-view" role="tab" data-toggle="tab"><i class="fa fa-list-ul"></i></a></li>
+                            </ul>
+                            <!-- shop-item-filter-list end -->
+                            <!-- <div class="radio-container-div custom-shop-item-filter-full">
+                                <label class="radio-container">Formals
+                                  <input type="radio" checked="checked" class="switch-collection-radio" name="fc_radio" value="formals" disabled>
+                                  <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container">Casuals
+                                  <input type="radio" class="switch-collection-radio" name="fc_radio" value="casuals" disabled>
+                                  <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <label class="switch custom-shop-item-filter-full">
+                                <input type="checkbox" class="formal-casual-switch" name="switch-collections" checked>
+                                <span class="slider round"></span>
+                            </label>
+                            <span class="custom-shop-item-filter-full cloned-p-shop-item-filter">Showing All collections</span> -->
+                            <!-- filter-form start -->
+                            <form class="filter-form" action="#">
+                                <div class="orderby-wrapper custom-orderby-wrapper">
+                                    <label style="vertical-align: middle;">Sort By : </label>&nbsp;
+                                    <span class="orderby-select custom-orderby-select">
+                                        <select id="orderByFilter" name="orderByFilter" class="orderby nice-select right">
+                                        	<option value="date">Sort by newness</option>
+                                            <option value="popularity">Sort by popularity</option>
+                                            <option value="priceAsc">Sort by price: low to high</option>
+                                            <option value="priceDesc">Sort by price: high to low</option>
+                                        </select>
+                                    </span>
+                                </div>
+                            </form>
+                            <!-- filter-form end -->
+                        </div>
+                        <!-- shop-item-filter start -->
+                        <!-- shop-products-wrapper start -->
+                        <div class="shop-products-wrapper">
+                            <div class="tab-content">
+                                <div id="grid-view" class="tab-pane fade active show" role="tabpanel">
+                                    <div class="shop-product-area">
+                                        <div class="row grid-view-row">
+                                        {% if products %}
+                                            {% for product in products %}
+                                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                                <!-- single-product start -->
+                                                <div class="single-product">
+                                                    <div class="product-image custom-product-image-css">
+                                                        <a href="">
+                                                            <img src="{{ base_url() }}/images/products/product_{{ product.id }}/medium.jpg" class="custom-product-img" alt="">
+                                                        </a>
+                                                        <span class="sale-sticker">New</span>
+                                                        <div class="product-action">
+                                                            <a href="javascript:void(0)" class="quick-view" data-productId="{{ product.id }}" data-toggle="modal" data-target="#productModal">
+                                                                <i class="fa fa-search"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="single-product-info">
+                                                        <h3><a href="">{{ product.product_name }}</a></h3>
+                                                        <div class="product-price-box">
+                                                            <span class="new-price">&#x20b9;{{ product.product_price }}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- single-product end -->
+                                            </div>
+                                            {% else %}
+                                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                                <h3 style="margin-top: 40px; margin-bottom: 40px;">No product found...</h3>
+                                            </div>
+                                            {% endfor %}
+                                        {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="list-view" class="tab-pane fade list-view-row" role="tabpanel">
+                                    <!-- list-view-areat start -->
+                                    {% if products %}
+                                        {% for product in products %}
+                                        <div class="list-view-area mt-30">
+                                            <div class="row">
+                                                <div class="col-lg-4 col-md-6">
+                                                    <div class="product-list custom-product-image-css">
+                                                        <div class="product-image">
+                                                                <a href="">
+                                                                    <img src="{{ base_url() }}/images/products/product_{{ product.id }}/medium.jpg" alt="">
+                                                                </a>
+                                                                <span class="sale-sticker">New</span>
+                                                                <div class="product-action">
+                                                                    <a href="javascript:void(0)" class="quick-view" data-productId="{{ product.id }}" data-toggle="modal" data-target="#productModal">
+                                                                        <i class="fa fa-search"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-8 col-md-6">
+                                                    <div class="single-product-info">
+                                                            <h3><a href="">{{ product.product_name }} </a></h3>
+                                                            <div class="rating-box">
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star-o"></i>
+                                                            <i class="fa fa-star-o"></i>
+                                                            <i class="fa fa-star-o"></i>
+                                                            </div>
+                                                            <div class="product-price-box">
+                                                                <span class="new-price">&#x20b9;{{ product.product_price }}</span>
+                                                            </div>
+                                                            <span>Stock availability: <a href="javascript:void(0)" style="color: green;"><i class="fa fa-check-square" aria-hidden="true"></i> In Stock</a></span>
+                                                            {# <span>Stock availability: <a href="javascript:void(0)" style="color: red;"><i class="fa fa-times-circle" aria-hidden="true"></i> Out of stock</a></span> #}
+                                                            <p>{{ product.product_description }}</p>
+                                                            <button class="button btn-cart cstm-buy-now-single" data-product-id="1" style=""><i class="fa fa-get-pocket" aria-hidden="true"></i><span class="buy-now-single"> Buy Now</span></button>
+                                                            <button class="button btn-cart cstm-add-cart-single" data-product-id="1" style=""><i class="fa fa-cart-plus" aria-hidden="true"></i><span class="add-cart-single"> Add to cart</span></button>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% else %}
+                                        <div class="col-lg-12 col-md-12 col-sm-12" style="padding: 0 0;">
+                                            <h3 style="margin-top: 40px; margin-bottom: 40px;">No product found...</h3>
+                                        </div>
+                                        {% endfor %}
+                                    {% endif %}
+                                    <!-- list-view-area end -->
+                                    {# <div class="col-lg-12 col-md-12 col-sm-12" style="padding: 0 0;">
+                                        <h3 style="margin-top: 40px; margin-bottom: 40px;">No products found under this category...</h3>
+                                    </div> #}
+                                    <!-- list-view-areat start -->
+                                    <!-- <div class="list-view-area mt-30">
+                                       <div class="row">
+                                           <div class="col-lg-4 col-md-6">
+                                               <div class="product-list">
+                                                   <div class="product-image">
+                                                        <a href="<?php echo Config::get('app.url'); ?>/single-product/firstproduct">
+                                                            <img src="" alt="">
+                                                        </a>
+                                                        <span class="sale-sticker">New</span>
+                                                        <div class="product-action">
+                                                            <a href="#" class="quick-view" data-toggle="modal" data-target="#productModal">
+                                                                <i class="fa fa-search"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                               </div>
+                                           </div>
+                                           <div class="col-lg-8 col-md-6">
+                                               <div class="single-product-info">
+                                                    <h3><a href="/single-product/firstproduct">The new autumn and winter 2018 </a></h3>
+                                                    <div class="rating-box">
+                                                       <i class="fa fa-star"></i>
+                                                       <i class="fa fa-star"></i>
+                                                       <i class="fa fa-star"></i>
+                                                       <i class="fa fa-star"></i>
+                                                       <i class="fa fa-star-o"></i>
+                                                    </div>
+                                                    <div class="product-price-box">
+                                                        <span class="new-price">$25.99</span>
+                                                    </div>
+                                                    <p>Video in your pocket. Its the small iPod with one very big idea: video. The worlds most popular music player now lets you enjoy movies, TV shows, and more on a two-inch display thats 65% brighter than before.
+                                                    Cover Flow.Brow..</p>
+                                                    <button class="button btn-cart"><i class="fa fa-get-pocket" aria-hidden="true"></i><span class="buy-now-single"> Buy Now</span></button>
+                                                    <button class="button btn-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i><span class="add-cart-single"> Add to cart</span></button>
+                                                </div>
+                                           </div>
+                                       </div>
+                                    </div> -->
+                                    <!-- list-view-area end -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- shop-products-wrapper end -->
+                        <!-- pagination-area start -->
+                        <div class="pagination-area">
+                            <div class="paginatoin-area">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 showing-items-per-page">
+                                        <p>Showing 1-6 of 100 item(s) </p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <ul class="pagination-box custom-pagination-box">
+                                          <li><a class="Previous active"  href="javascript:void(0)" style="cursor: not-allowed;" title="No Previous Pages"><i class="zmdi zmdi-chevron-left"></i> Previous</a></li>
+                                        	<li class="active"><a  href="javascript:void(0)" title="Page 1"> Page 1</a></li>
+                                          <li><a class="Next" href="javascript:void(0)"> Next <i class="zmdi zmdi-chevron-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- pagination-area end -->
+                    </div>
+                    <!-- archive-border-area end -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- shop-page-main-content end -->
+</div>
+<!-- shop-page-wrapper end -->
+<input type="hidden" id="checked_collection" name="checked_collection" value="Formals" />
+<input type="hidden" id="order_filter" name="order_filter" value="date" />
+<input type="hidden" id="ajax_pagination_page" name="ajax_pagination_page" value="0" />
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        if($('input[name="fc_radio"]').prop('checked')){
+            // alert($(this).is(':enabled'));
+            if($(this).is(':enabled')){
+                $(this).find('.checkmark').css('opacity', '1');
+            } else {
+                // alert("coming");
+                $(this).find('.checkmark').css('opacity', '0.5');
+            }
+        }
+
+        if($('input[name="fc_radio1"]').prop('checked')){
+            // alert($(this).attr('disabled'));
+            if($(this).is(':enabled')){
+                $(this).find('.checkmark').css('opacity', '1');
+            } else {
+                $(this).find('.checkmark').css('opacity', '0.5');
+            }
+        }
+    });
+
+    $(document).on('change', 'input[name="switch-collections"]', function(){
+        // alert($(this).prop('checked'));
+        if($(this).prop('checked') == true){
+            $('input[name="switch-collections1"]').prop('checked', true);
+            $('input[name="fc_radio"]').attr('disabled', true);
+            $('input[name="fc_radio1"]').attr('disabled', true);
+            $('.checkmark').css('opacity','0.5');
+        } else {
+            $('input[name="switch-collections1"]').prop('checked', false);
+            $('input[name="fc_radio"]').attr('disabled', false);
+            $('input[name="fc_radio1"]').attr('disabled', false);
+            $('.checkmark').css('opacity','1');
+        }
+    });
+
+    $(document).on('change', 'input[name="switch-collections1"]', function(){
+        // alert($(this).prop('checked'));
+        if($(this).prop('checked') == true){
+            $('input[name="switch-collections"]').prop('checked', true);
+            $('input[name="fc_radio"]').attr('disabled', true);
+            $('input[name="fc_radio1"]').attr('disabled', true);
+            $('.checkmark').css('opacity','0.5');
+        } else {
+            $('input[name="switch-collections"]').prop('checked', false);
+            $('input[name="fc_radio"]').attr('disabled', false);
+            $('input[name="fc_radio1"]').attr('disabled', false);
+            $('.checkmark').css('opacity','1');
+        }
+    });
+
+    $(document).on('change', '.formal-casual-switch', function(){
+        // alert("coming...");
+    	$('#checked_collection').val($(this).parent().parent().parent().find('input[type="radio"]:checked').val().trim());
+    	getProducts();
+    });
+
+    $(document).on('change', '.switch-collection-radio', function(){
+    	var checked_collection = '';
+    	if($(this).prop('checked')){
+    		checked_collection = $(this).val().trim();
+    	}
+
+    	$('#checked_collection').val(checked_collection);
+    	getProducts();
+    });
+
+    $(document).on('click', '.custom-orderby-select', function(){
+    	var sort_value = $('#order_filter').val();
+    	var filter_val = $(this).find('li.selected').attr('data-value').trim();
+    	if(sort_value != filter_val){
+    		$('#order_filter').val(filter_val);
+    		// alert(filter_val);
+    		getProducts();
+    	}
+    });
+
+    $(document).on('click', '.Previous-Next-ajax', function(){
+    	var page_no = $(this).attr('data-page-no');
+    	$('#ajax_pagination_page').val(page_no);
+    	getProducts();
+    });
+
+	function getProducts(){
+		var filter_url = window.location.href;
+		if (filter_url.indexOf('?') == -1) {
+		   filter_url = filter_url + '?ajaxUrl=1';
+		} else {
+			filter_url = filter_url + '&ajaxUrl=1';
+		}
+		var type = '';
+		var collection = '';
+		var order_filter = $('#order_filter').val();
+		var pagination_page_no = $('#ajax_pagination_page').val();
+		if($('.formal-casual-switch').prop('checked') == false){
+            if($('#checked_collection').val() != ''){
+	        	collection = $('#checked_collection').val().trim();
+	        	filter_url = filter_url + "&collectionType=" + collection;
+	        }
+        }
+        if(order_filter != ''){
+        	filter_url = filter_url + "&orderType=" + order_filter.trim();
+        }
+
+        if(pagination_page_no != 0){
+        	filter_url = filter_url + "&page=" + pagination_page_no.trim();
+        }
+
+		$.ajax({
+            type: 'GET',
+            dataType : "json",
+            data : {"_token": ""},
+            url: filter_url,
+            async: false,
+            cache:false,
+            error:function(e){
+                // console.log(e.responseJSON.error);
+                if(e.responseJSON.error == true){
+                    if(e.responseJSON.message != null){
+                        // $('.add-product-error').html(e.responseJSON.message).show();
+                    }
+                }
+            },
+            beforeSend: function(){
+            	// $('.grid-view-row-loader').show();
+		        $('.grid-view-row').html('<div class="col-lg-12 col-md-12 col-sm-12" style="text-align: center;">'+
+		                                    '<img src="{{ base_url() }}/img/loadingImage.gif">'+
+		                                '</div>');
+		        $('.list-view-row').html('<div class="col-lg-12 col-md-12 col-sm-12" style="text-align: center;">'+
+		                                    '<img src="{{ base_url() }}/img/loadingImage.gif">'+
+		                                '</div>');
+            },
+            complete: function(){
+                // $('.grid-view-row-loader').hide();
+                // $('.grid-view-row').html('complete fetched grid');
+        		// $('.list-view-row').html('complete fetched list');
+            },
+            success: function(data){
+                // console.log(data);
+                if(data.success == true){
+                	$('html, body').animate({
+                        'scrollTop' : $(".shop-page-main-content").offset().top
+                    });
+                	if(data.all_products != ''){
+						// $('.grid-view-row').html('fetched grid');
+        				// $('.list-view-row').html('fetched list');
+        				if(Array.isArray(data.all_products)){
+        					$('.grid-view-row').html('');
+        					$('.list-view-row').html('');
+        					$.each(data.all_products, function(key, value){
+        						// alert(value.id);
+        						var featuredImg = '{{ base_url() }}/img/no_product_photo.jpg';
+        						if(value.featured_img != ''){
+        							featuredImg = '{{ base_url() }}/productFiles/'+value.featured_img;
+        						}
+
+        						var productDescription = value.short_description;
+        						if(productDescription == ''){
+        							productDescription = value.long_description;
+        						}
+
+                                var new_offer_label = '';
+                                if((value.offer_type != 'none') && (value.offer_starts <= value.date_now)){
+                                    new_offer_label = '<span class="sale-sticker" style="background: #ED2F59;">Offer</span>';
+                                } else {
+                                    if(value.is_new == 1){
+                                        new_offer_label = '<span class="sale-sticker">New</span>';
+                                    }
+                                }
+
+                                var product_price_box_template = '';
+                                if((value.offer_type == 'percent') && (value.offer_starts <= value.date_now)){
+                                    product_price_box_template = '<span class="new-price">&#x20b9;'+value.offer_price+'</span>'+
+                                                                '<span class="old-price">&#x20b9;'+value.price+'</span>';
+                                } else if((value.offer_type == 'buyget') && (value.offer_starts <= value.date_now)){
+                                    product_price_box_template = '<span class="new-price">&#x20b9;'+value.price+'</span><br>'+
+                                                                '<span class="new-price">('+value.offer_text+')</span>';
+                                } else {
+                                    product_price_box_template = '<span class="new-price">&#x20b9;'+value.price+'</span>';
+                                }
+
+        						$('.grid-view-row').append('<div class="col-lg-4 col-md-4 col-sm-6">'+
+			                                                '<div class="single-product">'+
+			                                                    '<div class="product-image custom-product-image-css">'+
+			                                                        '<a href="{{ base_url() }}/single-product/'+value.id+'/'+value.name.replace(' ', '')+'">'+
+																		'<img src="'+featuredImg+'" class="custom-product-img" alt="">'+
+			                                                        '</a>'+
+			                                                        new_offer_label+
+			                                                        '<div class="product-action">'+
+			                                                            '<a href="javascript:void(0)" class="quick-view" data-productId="'+value.id+'">'+
+			                                                                '<i class="fa fa-search"></i>'+
+			                                                            '</a>'+
+			                                                        '</div>'+
+			                                                    '</div>'+
+			                                                    '<div class="single-product-info">'+
+			                                                        '<h3><a href="{{ base_url() }}/single-product/'+value.id+'/'+value.name.replace(' ', '')+'">'+value.name+'</a></h3>'+
+			                                                        '<div class="product-price-box">'+
+			                                                            product_price_box_template+
+			                                                        '</div>'+
+			                                                    '</div>'+
+			                                                '</div>'+
+			                                            '</div>');
+
+        						$('.list-view-row').append('<div class="list-view-area mt-30">'+
+                                       '<div class="row">'+
+                                           '<div class="col-lg-4 col-md-6">'+
+                                               '<div class="product-list custom-product-image-css">'+
+                                                   '<div class="product-image">'+
+                                                        '<a href="/single-product/'+value.id+'/'+value.name.replace(' ', '')+'">'+
+                                                            '<img src="'+featuredImg+'" alt="">'+
+                                                        '</a>'+
+                                                        new_offer_label+
+                                                        '<div class="product-action">'+
+                                                            '<a href="javascript:void(0)" class="quick-view" data-productId="'+value.id+'">'+
+                                                                '<i class="fa fa-search"></i>'+
+                                                            '</a>'+
+                                                        '</div>'+
+                                                    '</div>'+
+                                               '</div>'+
+                                           '</div>'+
+                                           '<div class="col-lg-8 col-md-6">'+
+                                               '<div class="single-product-info">'+
+                                                    '<h3><a href="/single-product/'+value.id+'/'+value.name.replace(' ', '')+'">'+value.name+' </a></h3>'+
+                                                    '<div class="rating-box">'+
+                                                       '<i class="fa '+((value.rating != 0) && (value.rating >= 1) ? 'fa-star' : 'fa-star-o')+'"></i>'+
+                                                       '<i class="fa '+((value.rating != 0) && (value.rating >= 2) ? 'fa-star' : 'fa-star-o')+'"></i>'+
+                                                       '<i class="fa '+((value.rating != 0) && (value.rating >= 3) ? 'fa-star' : 'fa-star-o')+'"></i>'+
+                                                       '<i class="fa '+((value.rating != 0) && (value.rating >= 4) ? 'fa-star' : 'fa-star-o')+'"></i>'+
+                                                       '<i class="fa '+((value.rating != 0) && (value.rating >= 5) ? 'fa-star' : 'fa-star-o')+'"></i>'+
+                                                    '</div>'+
+                                                    '<div class="product-price-box">'+
+                                                        product_price_box_template+
+                                                    '</div>'+
+                                                    '<p>'+productDescription+'</p>'+
+                                                    '<button class="button btn-cart cstm-buy-now-single" data-product-id="'+value.id+'" style="'+(value.status == 0 ? 'opacity: 0.7; cursor: no-drop;' : '')+'"><i class="fa fa-get-pocket" aria-hidden="true"></i><span class="buy-now-single"> Buy Now</span></button>&nbsp;'+
+                                                    '<button class="button btn-cart cstm-add-cart-single" data-product-id="'+value.id+'" style="'+(value.status == 0 ? 'opacity: 0.7; cursor: no-drop;' : '')+'"><i class="fa fa-cart-plus" aria-hidden="true"></i><span class="add-cart-single"> Add to cart</span></button>'+
+                                                '</div>'+
+                                           '</div>'+
+                                       '</div>'+
+                                    '</div>');
+        					});
+
+                            if(data.paginate_product.from == null){
+                                data.paginate_product.from = 0;
+                            }
+                            if(data.paginate_product.to == null){
+                                data.paginate_product.to = 0;
+                            }
+
+							$('.showing-items-per-page').html('<p>Showing '+data.paginate_product.from+'-'+data.paginate_product.to+' of '+data.paginate_product.total+' item(s) </p>');
+
+							$('.custom-pagination-box').html('');
+
+							if(data.paginate_product.prev_page_url == null){
+								$('.custom-pagination-box').append('<li><a class="Previous active"  href="javascript:void(0)" style="cursor: not-allowed;" title="No Previous Pages"><i class="zmdi zmdi-chevron-left"></i> Previous</a></li>');
+							} else {
+								var previous_page_no = data.paginate_product.prev_page_url[data.paginate_product.prev_page_url.length -1];
+								$('.custom-pagination-box').append('<li><a class="Previous Previous-Next-ajax"  href="javascript:void(0)" data-page-no="'+previous_page_no+'"><i class="zmdi zmdi-chevron-left"></i> Previous</a></li>');
+							}
+
+							$('.custom-pagination-box').append('<li class="active"><a  href="javascript:void(0)" title="Page '+data.paginate_product.current_page+'"> Page '+data.paginate_product.current_page+'</a></li>');
+
+							if(data.paginate_product.next_page_url == null){
+								$('.custom-pagination-box').append('<li><a class="Next" href="javascript:void(0)" style="cursor: not-allowed;" title="No Next Pages"> Next <i class="zmdi zmdi-chevron-right"></i></a></li>');
+							} else {
+								var next_page_no = data.paginate_product.next_page_url[data.paginate_product.next_page_url.length -1];
+								$('.custom-pagination-box').append('<li><a class="Next Previous-Next-ajax" href="javascript:void(0)" data-page-no="'+next_page_no+'"> Next <i class="zmdi zmdi-chevron-right"></i></a></li>');
+							}
+
+        				} else {
+        					$('.grid-view-row').html('<div class="col-lg-12 col-md-12 col-sm-12">'+
+		                                                '<h3 style="margin-top: 40px; margin-bottom: 40px;">No products found...</h3>'+
+		                                            '</div>');
+	        				$('.list-view-row').html('<div class="col-lg-12 col-md-12 col-sm-12" style="padding: 0 0;">'+
+				                                        '<h3 style="margin-top: 40px; margin-bottom: 40px;">No products found...</h3>'+
+				                                    '</div>');
+        				}
+                	} else {
+                		$('.grid-view-row').html('<div class="col-lg-12 col-md-12 col-sm-12">'+
+	                                                '<h3 style="margin-top: 40px; margin-bottom: 40px;">No products found...</h3>'+
+	                                            '</div>');
+        				$('.list-view-row').html('<div class="col-lg-12 col-md-12 col-sm-12" style="padding: 0 0;">'+
+			                                        '<h3 style="margin-top: 40px; margin-bottom: 40px;">No products found...</h3>'+
+			                                    '</div>');
+                	}
+                }
+            }
+        });
+	}
+
+    $(document).on('click', '.cstm-add-cart-single', function(){
+        var product_id = $(this).attr('data-product-id');
+        var qty = 1;
+
+        window.location.href = "/single-product/"+product_id;
+        // $.ajax({
+        //     type: 'POST',
+        //     dataType : "json",
+        //     data : {"single_productId":product_id, "single_quantity": qty, "_token": ""},
+        //     url: "/add-to-cart",
+        //     error:function(e){
+        //         // console.log(e.responseJSON.error);
+        //         if(e.responseJSON.error == true){
+        //             if(e.responseJSON.message != null){
+        //                 $('html, body').animate({
+        //                     'scrollTop' : $(".shop-page-wrapper").offset().top
+        //                 });
+
+        //                 $('.shop-add-to-cart-dump').html('<div class="alert alert-danger alert-dismissible">'+
+        //                                 '<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>'+
+        //                                 '<strong>Error!</strong> '+ e.responseJSON.message +
+        //                             '</div>');
+        //             }
+        //             if(e.responseJSON.session == false){
+        //                 window.location.href = "<?php echo Config::get('app.url'); ?>/login-register";
+        //             }
+        //         }
+        //     },
+        //     complete: function(){
+
+        //     },
+        //     success: function(data){
+        //         if(data.success == true){
+
+        //             $('html, body').animate({
+        //                 'scrollTop' : $("body").offset().top
+        //             });
+
+        //             $('.shop-add-to-cart-dump').html('<div class="alert alert-success alert-dismissible">'+
+        //                             '<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>'+
+        //                             '<strong>Success!</strong> '+ data.message +
+        //                         '</div>');
+
+        //             $('#custom-bag-total').html(data.total_price);
+        //             $('.custom-item-total').html(data.total_cart);
+        //             if(data.get_cart != ''){
+        //                 $('.custom-cart-items').html('');
+        //                 $.each(data.get_cart, function(get_cart_key, get_cart_value){
+        //                     var productImg = "<?php echo Config::get('app.url'); ?>/"+get_cart_value.product_img;
+        //                     var product_link = "<?php echo Config::get('app.url'); ?>/single-product/"+get_cart_value.product_id+"/"+get_cart_value.product_name;
+        //                     $('.custom-cart-items').append('<li>'+
+        //                                                         '<div class="shoping-cart-image">'+
+        //                                                             '<a href="'+product_link+'"><img src="'+productImg+'" alt=""></a>'+
+        //                                                             '<span class="cart-sticker">'+get_cart_value.product_qty+'x</span>'+
+        //                                                         '</div>'+
+        //                                                         '<div class="shoping-product-details">'+
+        //                                                             '<h3>'+get_cart_value.product_name+'</h3>'+
+        //                                                             '<div class="cart-product-price">'+
+        //                                                                 '<span>&#x20b9;'+get_cart_value.product_price+'</span>'+
+        //                                                             '</div>'+
+        //                                                         '</div>'+
+        //                                                     '</li>');
+        //                 });
+        //                 $('.custom-cart-items').append('<li>'+
+        //                                                     '<div class="cart-total">'+
+        //                                                         '<h5>Subtotal<span class="float-right custom-cart-subtotal">&#x20b9;'+data.total_price+'</span></h5>'+
+        //                                                         '<h5>Shipping<span class="float-right">&#x20b9;0.00</span></h5>'+
+        //                                                         '<h5>Taxes<span class="float-right">&#x20b9;0.00</span></h5>'+
+        //                                                         '<h5>Total<span class="float-right custom-cart-total">&#x20b9;'+data.total_price+'</span></h5>'+
+        //                                                     '</div>'+
+        //                                                 '</li>');
+        //                 $('.custom-cart-btn').html('checkout');
+        //             } else {
+        //                 $('.custom-cart-items').html('');
+        //             }
+        //         }
+        //     }
+        // });
+    });
+
+    $(document).on('click', '.cstm-buy-now-single', function(){
+        var product_id = $(this).attr('data-product-id');
+        var qty = 1;
+
+        window.location.href = "/single-product/"+product_id;
+        // $.ajax({
+        //     type: 'POST',
+        //     dataType : "json",
+        //     data : {"single_productId":product_id, "single_quantity": qty, "_token": ""},
+        //     url: "<?php echo Config::get('app.url'); ?>/direct-buy-now",
+        //     error:function(e){
+        //         // console.log(e.responseJSON.error);
+        //         if(e.responseJSON.error == true){
+        //             if(e.responseJSON.message != null){
+        //                 $('html, body').animate({
+        //                     'scrollTop' : $(".shop-page-wrapper").offset().top
+        //                 });
+
+        //                 $('.shop-add-to-cart-dump').html('<div class="alert alert-danger alert-dismissible">'+
+        //                                 '<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>'+
+        //                                 '<strong>Error!</strong> '+ e.responseJSON.message +
+        //                             '</div>');
+        //             }
+        //             if(e.responseJSON.session == false){
+        //                 window.location.href = "<?php echo Config::get('app.url'); ?>/login-register";
+        //             }
+        //         }
+        //     },
+        //     complete: function(){
+
+        //     },
+        //     success: function(data){
+        //         if(data.success == true){
+
+        //             $('html, body').animate({
+        //                 'scrollTop' : $("body").offset().top
+        //             });
+
+        //             $('.shop-add-to-cart-dump').html('<div class="alert alert-success alert-dismissible">'+
+        //                             '<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>'+
+        //                             '<strong>Success!</strong> '+ data.message +
+        //                         '</div>');
+
+        //             window.location.href = "<?php echo Config::get('app.url'); ?>/checkout/"+data.product_id+"/"+data.quantity;
+        //         }
+        //     }
+        // });
+    });
+
+</script>
+
+{% endblock %}

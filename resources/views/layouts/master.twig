@@ -1,0 +1,734 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Essence Basket | Shop</title>
+    <meta name="description" content="">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" >
+    <meta name="csrf-token" content="">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ base_url() }}/img/favicon.ico">
+	<!-- all CSS hear -->
+	{# <link rel="stylesheet" href="{{ base_url() }}/css/bootstrap.min.css" /> #}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="{{ base_url() }}/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="{{ base_url() }}/css/material-design-iconic-font.min.css" />
+	<link rel="stylesheet" href="{{ base_url() }}/css/nice-select.css" />
+	<link rel="stylesheet" href="{{ base_url() }}/css/slick.min.css" />
+	<link rel="stylesheet" href="{{ base_url() }}/css/owl.carousel.min.css" />
+	<link rel="stylesheet" href="{{ base_url() }}/css/mainmenu.css" />
+	<link rel="stylesheet" href="{{ base_url() }}/css/style.css" />
+	<link rel="stylesheet" href="{{ base_url() }}/css/responsive.css" />
+
+	<!-- Bootstrap toggle -->
+	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+
+	<!--Custom CSS-->
+	<link rel="stylesheet" href="{{ base_url() }}/css/custom-css.css" />
+
+    <script type="text/javascript" src="{{ base_url() }}/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <!-- jquery -->
+	{# <script type="text/javascript" src="{{ base_url() }}/js/vendor/jquery-1.12.4.min.js"></script> #}
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience. Thanks</p>
+    <![endif]-->
+    <!-- Add your application content here -->
+
+    <div class="wrapper home-1">
+        <header>
+            <!-- header-top start -->
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="top-right-wrapper">
+                                <!-- top-dropdown start -->
+                                <div class="top-dropdown">
+                                    <ul>
+                                        <li class="drodown-show"><a href="#">USD <i class="fa fa-angle-down"></i></a>
+                                            <ul class="open-dropdown">
+                                                <li><a href="#"> ₹ Rupees</a></li>
+                                                <li><a href="#"> € Euro</a></li>
+                                                <li><a href="#"> $ US Dollar</a></li>
+                                                <li><a href="#"> £ Pound</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="drodown-show"><a href="#">English <i class="fa fa-angle-down"></i></a>
+                                            <ul class="open-dropdown">
+                                                <li><a href="#">English</a></li>
+                                                {# <li><a href="#">Français</a></li> #}
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- top-dropdown end -->
+                                <!-- shopping-cart start -->
+                                {# <div class="shopping-cart">
+                                    <ul>
+                                        <li><a href="javascript:void(0)"><span class="shpping-cart-text">Your bag: Total &#x20b9;<span id="custom-bag-total">3</span> </span><span class="item-total custom-item-total">3</span></a>
+                                            <!-- shopping-cart-wrapper start -->
+                                            <div class="shopping-cart-wrapper open-dropdown">
+                                                <ul class="custom-cart-items">
+                                                    <li>
+                                                        <div class="shoping-cart-image">
+                                                            <a href="single-product.html"><img src="{{ base_url() }}/img/product/1.jpg" alt=""></a>
+                                                            <span class="cart-sticker">1x</span>
+                                                        </div>
+                                                        <div class="shoping-product-details">
+                                                            <h3>Autumn on the new middle-aged men's clothes hot V-neck long-sleeved sweater</h3>
+                                                            <div class="cart-product-price">
+                                                                <span>$16.51</span>
+                                                            </div>
+                                                            <div class="product-size"><span><strong>Size</strong>: S</span></div>
+                                                            <div class="product-color">
+                                                               <span><strong>Color</strong>: Yellow</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="shoping-cart-image">
+                                                            <a href="single-product.html"><img src="{{ base_url() }}/img/product/2.jpg" alt=""></a>
+                                                            <span class="cart-sticker">1x</span>
+                                                        </div>
+                                                        <div class="shoping-product-details">
+                                                            <h3>Contracted casual fashion Men sweater free shipping</h3>
+                                                            <div class="cart-product-price">
+                                                                <span>$25.99</span>
+                                                            </div>
+                                                            <div class="product-size"><span><strong>Size</strong>: S</span></div>
+                                                            <div class="product-color">
+                                                               <span><strong>Color</strong>: Yellow</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="cart-total">
+                                                            <h5>Subtotal<span class="float-right custom-cart-subtotal">&#x20b9;0.00</span></h5>
+                                                            <h5>Shipping<span class="float-right">&#x20b9;0.00</span></h5>
+                                                            <h5>Taxes<span class="float-right">&#x20b9;0.00</span></h5>
+                                                            <h5>Total<span class="float-right custom-cart-total">&#x20b9;0.00</span></h5>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="shoping-checkout">
+                                                    <a href="/cart-checkout" class="cart-btn custom-cart-btn">Go to cart page</a>
+                                                </div>
+                                            </div>
+                                            <!-- shopping-cart-wrapper end -->
+                                        </li>
+                                    </ul>
+                                </div> #}
+                                <!-- shopping-cart end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header-top end -->
+            <!-- header-mid-area start -->
+            <div class="header-mid-area">
+                <div class="container">
+                    <div class="row" style="align-items: center;">
+                        <div class="col-lg-6 col-md-6 col-xs-12">
+                            <!-- logo start -->
+                            <div class="logo">
+                                <a href="/"><img src="{{ base_url() }}/img/logo/2dFaLogo1435.png" style="width: 175px;margin: 5px;" alt=""></a>
+                            </div>
+                            <!-- logo end -->
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12">
+                            <div class="mid-right-wrapper">
+                                <div class="user-info-top">
+                                    <ul>
+                                        <li><a href="#">Welcome, Guest</a></li>
+                                        <li><a href="/login-register">Sign in</a></li>
+                                        <li><a href="/cart-checkout" class="checkout">Checkout</a></li>
+                                    </ul>
+                                </div>
+                                <div class="search-area">
+                                    <form>
+                                        <input id="search_txt_field" type="text" placeholder="Search by category">
+                                        <button id="search_cat_btn" type="button"><i class="fa fa-search"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header-mid-area end -->
+            <!-- menu-arae start -->
+            <div id="stickymenu" class="main-menu-area menu-area-two solidblockmenu">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="main-menu menu-style-two display-none">
+                                <nav>
+                                     <ul>
+                                        <li class="active"><a href="/">Home</a></li>
+                                    </ul>
+
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!-- Mobile Menu Area Start -->
+                            <div class="mobile-menu-area hidden-md hidden-lg">
+                                <div class="mobile-menu">
+                                    <nav id="mobile-menu-active">
+                                        <ul style="border-left: 1px solid #ccc; border-right: 1px solid #ccc;">
+                                            <li class="active"><a href="/">Home</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <!-- Mobile Menu Area End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- menu-arae end -->
+        </header>
+
+        <!-- Page content area start -->
+        {% block content %}{% endblock %}
+        <!-- Page content area end -->
+
+        <!-- brand-logo-area start -->
+        <div class="brand-logo-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="brand-logo-active owl-carousel">
+                            <div class="single-brand-logo">
+                                <a href="#"><img src="{{ base_url() }}/img/brand/1.png" alt=""></a>
+                            </div>
+                            <div class="single-brand-logo">
+                                <a href="#"><img src="{{ base_url() }}/img/brand/2.png" alt=""></a>
+                            </div>
+                            <div class="single-brand-logo">
+                                <a href="#"><img src="{{ base_url() }}/img/brand/3.png" alt=""></a>
+                            </div>
+                            <div class="single-brand-logo">
+                                <a href="#"><img src="{{ base_url() }}/img/brand/4.png" alt=""></a>
+                            </div>
+                            <div class="single-brand-logo">
+                                <a href="#"><img src="{{ base_url() }}/img/brand/5.png" alt=""></a>
+                            </div>
+                            <div class="single-brand-logo">
+                                <a href="#"><img src="{{ base_url() }}/img/brand/6.png" alt=""></a>
+                            </div>
+                            <div class="single-brand-logo">
+                                <a href="#"><img src="{{ base_url() }}/img/brand/1.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- brand-logo-area end -->
+        <!-- footer-area start -->
+        <footer class="footer-area">
+            <div class="header-top custom-header-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-xs-12">
+                            <!-- support-area start -->
+                            <div class="support-area" style="justify-content: center; align-items: center;">
+                                <div class="single-support">
+                                    <div class="support-icon">
+                                        <i class="fa fa-truck"></i>
+                                    </div>
+                                    <div class="support-description">
+                                        <p>Delivery within 2 working days</p>
+                                    </div>
+                                </div>
+                                <!--
+                                <div class="single-support">
+                                    <div class="support-icon">
+                                        <i class="fa fa-lock"></i>
+                                    </div>
+                                    <div class="support-description">
+                                        <p>Secure Shopping</p>
+                                    </div>
+                                </div>
+                                <div class="single-support">
+                                    <div class="support-icon">
+                                        <i class="fa fa-clock-o"></i>
+                                    </div>
+                                    <div class="support-description">
+                                        <p>Ordering time 9am to 10pm</p>
+                                    </div>
+                                </div>
+                                <div class="single-support">
+                                    <div class="support-icon">
+                                        <i class="fa fa-ban" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="support-description">
+                                        <p>No service outside Mumbai</p>
+                                    </div>
+                                </div>
+                                -->
+                                <div class="single-support support-width-custom">
+                                    <div class="support-icon">
+                                        <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="support-description">
+                                        <p>Products added to cart will be saved for you on same price if it's in stock.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- support-area end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-12">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="single-footer-content">
+                                        <div class="footer-title">
+                                            <h3>Store</h3>
+                                        </div>
+                                        <div class="footer-content-info">
+                                            <ul>
+                                                <li class="footer-contact"><i class="fa fa-map-marker"></i>R/n 17, Plot no. 305, Kolsa bunder, Darukhana, Reay Road, Mumbai - 400010.</li>
+                                                <li class="footer-contact"><i class="fa fa-phone"></i>(+91) 7977163926</li>
+                                                <li class="footer-contact"><i class="fa fa-phone"></i>(+91) 9167921715</li>
+                                                <!-- <li class="footer-contact"><i class="fa fa-fax"></i>9876543210</li> -->
+                                                <li class="footer-contact"><i class="fa fa-envelope"></i>info@2daysfashion.in</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="single-footer-content">
+                                        <div class="footer-title">
+                                            <h3>Essence Basket</h3>
+                                        </div>
+                                        <div class="footer-content-info">
+                                            <ul>
+                                                <li><a href="/shop">Shop</a></li>
+                                                <li><a href="/about-us">About us</a></li>
+                                                <li><a href="/contact-us">Contact Us</a></li>
+                                                <li><a href="/login-register">Login/Signup</a></li>
+                                                <li><a href="/my-account">My account</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="single-footer-content">
+                                        <div class="footer-title">
+                                            <h3>Our Categories</h3>
+                                        </div>
+                                        <div class="footer-content-info">
+                                            <ul>
+                                                <li><a href="#">Prices drop</a></li>
+                                                <li><a href="#">New products</a></li>
+                                                <li><a href="#">Best sales</a></li>
+                                                <li><a href="#">Contact us</a></li>
+                                                <li><a href="#">Stores</a></li>
+                                                <li><a href="#">Login</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="single-footer-content">
+                                        <div class="footer-title">
+                                            <h3>Information</h3>
+                                        </div>
+                                        <div class="footer-content-info">
+                                            <ul>
+                                                <li><a href="/FAQS">FAQ</a></li>
+                                                <li><a href="/TERMS-N-CONDITIONS" target="_blank">Delivery Information</a></li>
+                                                <li><a href="/CANCEL-AND-RETURN-POLICY" target="_blank">Cancel & Return Policy</a></li>
+                                                <li><a href="/CANCEL-AND-RETURN-POLICY" target="_blank">Payment Policy</a></li>
+                                                <li><a href="/PRIVACY-POLICY" target="_blank">Privacy Policy</a></li>
+                                                <li><a href="/TERMS-N-CONDITIONS" target="_blank">Terms & Conditions</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="single-footer-content">
+                                <div class="footer-title">
+                                    <h3>Follow to get updated with latest news and offers </h3>
+                                </div>
+                                <div class="footer-content-info">
+                                    <!-- <p>Register your email for news and special offers</p>
+                                    <form action="#" class="newsletter-form">
+                                        <div class="newsletter-input">
+                                            <input class="input-inner" type="text" placeholder="Your email address">
+                                        </div>
+                                        <input type="submit" value="Submit" class="newsletter-btn">
+                                    </form> -->
+                                    <div class="social-wrapper" style="margin-top: 0px;">
+                                        <h3>Follow us on:</h3>
+                                        <ul class="footer-social-icon">
+                                            <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                            <!-- <li><a href="#" class="vimeo"><i class="fa fa-vimeo"></i></a></li> -->
+                                            <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                                            <!-- <li><a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a></li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-botton">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="payment-img">
+                                <img src="{{ base_url() }}/img/brand/payumoney.png" alt="">
+                            </div>
+                            <div class="copy-right" style="margin-top: 10px;">
+                                <p>Copyright &copy; <a href="#">Essence Basket </a> | All Rights Reserved | A trusted online shopping website.</p>
+                                <!-- <p>A trusted online shopping website.</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer-area end -->
+
+        <!--==== Modal start ====-->
+        <div class="modal-wrapper">
+            <div class="modal fade" id="productModal" role="dialog">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                    <div class="modal-content">
+                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="modal-body">
+                            <div class="modal-inner-area row modal-inner-area-before-loading" style="display: block; text-align: center;">
+                                <img src="{{ base_url() }}/img/loadingImage.gif">
+                            </div>
+                            <div class="modal-inner-area row modal-inner-area-after-loading" style="display: none;">
+                                <div class="col-lg-12 col-md-12 col-sm-12 popup-add-to-cart-dump">
+
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <!--product-thumbnail start-->
+                                    <div class="product-thumbnail">
+                                        <div class="tab-content large-thum-image custom-large-thum-image">
+                                            <div role="tabpanel" class="tab-pane active" id="Thumb1">
+                                                <img src="{{ base_url() }}/img/product/larg-1.jpg" alt="">
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane" id="Thumb2">
+                                                <img src="{{ base_url() }}/img/product/larg-2.jpg" alt="">
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane" id="Thumb3">
+                                                <img src="{{ base_url() }}/img/product/larg-3.jpg" alt="">
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane" id="Thumb4">
+                                                <img src="{{ base_url() }}/img/product/larg-4.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="modal-product-tab">
+                                            <ul class="nav product-small-thum custom-product-small-thum slider-vertical">
+                                                <li role="presentation" class="active"><a href="#Thumb1" data-toggle="tab"><img src="{{ base_url() }}/img/product/s1.jpg" alt=""></a></li>
+                                                <li role="presentation"><a href="#Thumb2"  data-toggle="tab"><img src="{{ base_url() }}/img/product/s2.jpg" alt=""></a></li>
+                                                <li role="presentation"><a href="#Thumb3"  data-toggle="tab"><img src="{{ base_url() }}/img/product/s3.jpg" alt=""></a></li>
+                                                <li role="presentation"><a href="#Thumb4"  data-toggle="tab"><img src="{{ base_url() }}/img/product/s4.jpg" alt=""></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!--product-thumbnail end-->
+
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <!-- product-thumbnail-content start -->
+                                    <div class="quick-view-content">
+                                        <div class="product-info">
+                                            <h2 class="custom-popup-product-title">Autumn on the new middle-aged men's clothes hot V-neck long-sleeved sweater</h2>
+                                            <p  class="custom-popup-product-description">Faded short sleeves t-shirt with high neckline. Soft and stretchy material for a comfortable fit. Accessorize with a straw hat and you're ready for summer!</p>
+                                            <div class="custom-popup-attribute">
+                                                <div class="modal-size">
+                                                    <h4>Size</h4>
+                                                    <select>
+                                                        <option title="S" value="1">S</option>
+                                                        <option title="M" value="2">M</option>
+                                                        <option title="L" value="3">L</option>
+                                                    </select>
+                                                </div>
+                                                <div class="modal-size">
+                                                    <h4>Size</h4>
+                                                    <strong><span class="badge badge-secondary">New</span></strong>
+                                                    <strong><span class="badge badge-secondary">Default</span></strong>
+                                                </div>
+                                                <div class="modal-color">
+                                                    <h4>Color</h4>
+                                                    <div class="color-list">
+                                                        <ul>
+                                                            <li><a href="#" class="orange active"></a></li>
+                                                            <li><a href="#" class="paste"></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-price-box custom-popup-price">
+                                               <div class="old-price">$30.50</div>
+                                               <div class="new-price">$25.50 <span class="discount">-$5.00</span></div>
+                                           </div>
+                                           <div class="product-meta">
+                                            <span class="posted-meta-inner custom-popup-availability">
+                                                Stock availability:
+                                                <a href="javascript:void(0)" style="color: green;"><i class="fa fa-check-square" aria-hidden="true"></i> In Stock</a>&nbsp;
+                                                <a href="javascript:void(0)" style="color: red;"><i class="fa fa-times-circle" aria-hidden="true"></i> Out of stock</a>
+                                            </span>
+                                        </div>
+                                           <div class="quick-add-to-cart">
+                                                <form class="modal-cart popup-product-buyNow-addCart">
+                                                    <input type="hidden" name="_token" value="">
+                                                    <input type="hidden" name="popup_productId" value="">
+                                                    <div class="quantity">
+                                                        <label>Quantity</label>
+                                                        <div class="cart-plus-minus">
+                                                            <input class="cart-plus-minus-box" type="text" name="popup_quantity" value="1">
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="add-to-cart trigger-buy-now" data-form="popupProduct"><i class="fa fa-get-pocket" aria-hidden="true"></i><span class="buy-now-single"> Buy Now</span></button>
+                                                    <button type="button" class="add-to-cart trigger-add-cart" data-form="popupProduct"><i class="fa fa-cart-plus" aria-hidden="true"></i><span class="add-cart-single"> Add to cart</span></button>
+                                                </form>
+                                           </div>
+                                        </div>
+                                    </div>
+                                    <!-- product-thumbnail-content end -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--==== Modal end ====-->
+
+    </div>
+
+    <!--Custom JS for countdown-->
+    <script>
+        $(document).ready(function() {
+            $('#search_cat_btn').click(function(){
+            	var cat_name = $('#search_txt_field').val().trim();
+            	window.location.href = "/shop/"+cat_name;
+            });
+
+            $('.meanmenu-reveal').css({'width': '-webkit-fill-available', 'padding-left': '90%'});
+            $('.mean-expand').css({'width': '-webkit-fill-available', 'padding-left': '90%'});
+
+            $(window).scroll(function() {
+                if($('#stickymenu').hasClass('sticky')){
+                    $('#hurry-up-alert').hide();
+                } else {
+                    $('#hurry-up-alert').show();
+                }
+            });
+
+            $('.cart-plus-minus-box').on('input focusout', function(){
+                if($(this).val() == 0){
+                    $(this).val('');
+                }
+            });
+
+            $(".cart-plus-minus-box").inputFilter(function(value) {
+                return /^\d*$/.test(value);
+            });
+
+            $(document).on('click', '.quick-view', function(){
+                var productId = $(this).attr('data-productId');
+                // alert(productId);
+                $('#productModal').modal('show');
+                $('.modal-inner-area-before-loading').show();
+                $('.modal-inner-area-after-loading').hide();
+
+                $.ajax({
+                    type: 'POST',
+                    dataType : "json",
+                    data : {'productId': productId, "_token": ""},
+                    url: "/product-popup",
+                    error:function(e){
+                        // console.log(e.responseJSON.error);
+                        if(e.responseJSON.error == true){
+                            if(e.responseJSON.message != null){
+                                $('.modal-inner-area-after-loading').html('<div class="col-lg-12 col-md-12"><h2>'+e.responseJSON.message+'</h2></div>');
+                            }
+                        }
+                    },
+                    complete: function(){
+                        $('.modal-inner-area-before-loading').hide();
+                        $('.modal-inner-area-after-loading').show();
+                    },
+                    success: function(data){
+                        // console.log(data);
+                        // alert(data.get_product_details.length);
+                        if(data.success == true){
+                            $('.popup-add-to-cart-dump').html('');
+                            if(data.get_product_details != 0){
+                                var no_img = 'assets/img/no_product_photo.jpg';
+                                var set_images = [];
+                                if(data.get_product_details.featured_img != ''){
+                                    set_images.push('fashionFiles/productFiles/'+data.get_product_details.featured_img);
+                                }
+                                if(data.get_product_details.gallery != ''){
+                                    $.each(data.get_product_details.gallery, function(gallery_key, gallery_value){
+                                        set_images.push('fashionFiles/productFiles/'+gallery_value);
+                                    });
+                                }
+                                $('.custom-large-thum-image').html('');
+                                $('.custom-product-small-thum').html('');
+                                if(set_images != ''){
+                                    $.each(set_images, function(image_key, image_value){
+                                        if(image_key == 0){
+                                            $('.custom-large-thum-image').append('<div role="tabpanel" class="tab-pane active" id="Thumb'+image_key+'">'+
+                                                                                '<img src="/'+image_value+'" alt="">'+
+                                                                            '</div>');
+                                            $('.custom-product-small-thum').append('<li role="presentation" class="active"><a href="#Thumb'+image_key+'" data-toggle="tab"><img src="/'+image_value+'" alt=""></a></li>');
+                                        } else {
+                                            $('.custom-large-thum-image').append('<div role="tabpanel" class="tab-pane" id="Thumb'+image_key+'">'+
+                                                                                '<img src="/'+image_value+'" alt="">'+
+                                                                            '</div>');
+                                            $('.custom-product-small-thum').append('<li role="presentation"><a href="#Thumb'+image_key+'" data-toggle="tab"><img src="/'+image_value+'" alt=""></a></li>');
+                                        }
+                                    });
+                                } else {
+                                    $('.custom-large-thum-image').append('<div role="tabpanel" class="tab-pane active" id="Thumb1">'+
+                                                                        '<img src="/'+no_img+'" alt="" style="width:100%;">'+
+                                                                    '</div>');
+                                    $('.custom-product-small-thum').append('<li role="presentation" class="active"><a href="#Thumb1" data-toggle="tab"><img src="/'+no_img+'" alt=""></a></li>');
+                                }
+
+                                if(data.get_product_details.name != ''){
+                                    $('.custom-popup-product-title').html(data.get_product_details.name);
+                                } else {
+                                    $('.custom-popup-product-title').html('Not defined');
+                                }
+
+                                if(data.get_product_details.short_description != ''){
+                                    $('.custom-popup-product-description').html(data.get_product_details.short_description);
+                                } else {
+                                    if(data.get_product_details.long_description != ''){
+                                        $('.custom-popup-product-description').html(data.get_product_details.long_description);
+                                    } else {
+                                        $('.custom-popup-product-description').html('Not defined');
+                                    }
+                                }
+
+                                var product_price_box_template = '';
+                                if((data.get_product_details.offer_type == 'percent') && (data.get_product_details.offer_starts <= data.get_product_details.date_now)){
+                                    product_price_box_template = '<div class="old-price">&#x20b9;'+data.get_product_details.price+'</div>'+
+                                                                '<div class="new-price">&#x20b9;'+data.get_product_details.offer_price+' <span class="discount">'+data.get_product_details.offer_percent+'% Off</span></div>';
+                                } else if((data.get_product_details.offer_type == 'buyget') && (data.get_product_details.offer_starts <= data.get_product_details.date_now)){
+                                    product_price_box_template = '<div class="new-price">&#x20b9;'+data.get_product_details.price+' <span class="discount">'+data.get_product_details.offer_text+'</span></div>';
+                                } else {
+                                    product_price_box_template = '<div class="new-price">&#x20b9;'+data.get_product_details.price+'</div>';
+                                }
+
+                                $('.custom-popup-price').html(product_price_box_template);
+
+                                if(data.get_product_details.status == 1){
+                                    $('.custom-popup-availability').html('Stock availability: '+
+                                                '<a href="javascript:void(0)" style="color: green;"><i class="fa fa-check-square" aria-hidden="true"></i> In Stock</a>');
+                                    $('.trigger-buy-now').css({'opacity': '1', 'cursor': 'pointer'});
+                                    $('.trigger-add-cart').css({'opacity': '1', 'cursor': 'pointer'});
+                                } else {
+                                    $('.custom-popup-availability').html('Stock availability: '+
+                                                '<a href="javascript:void(0)" style="color: red;"><i class="fa fa-times-circle" aria-hidden="true"></i> Out of stock</a>');
+                                    $('.trigger-buy-now').css({'opacity': '0.7', 'cursor': 'no-drop'});
+                                    $('.trigger-add-cart').css({'opacity': '0.7', 'cursor': 'no-drop'});
+                                }
+
+                                $('.cart-plus-minus-box').val(1);
+
+                                $('.custom-popup-attribute').html('');
+                                if(data.get_product_details.isset_attributes != 0){
+                                    if((data.get_product_details.attributes != 'null') && (data.get_product_details.attributes != '')){
+                                        $.each(data.get_product_details.attributes, function(attr_key, attr_value){
+                                            if(attr_key == 'Color'){
+                                                $('.custom-popup-attribute').append('<div class="modal-color">'+
+                                                                                        '<h4>'+attr_key+'</h4>'+
+                                                                                        '<div class="color-list">'+
+                                                                                            '<ul></ul>'+
+                                                                                        '</div>'+
+                                                                                    '</div>');
+                                                if(attr_value.length != 0){
+                                                    $.each(attr_value, function(a_t_key, a_t_value){
+                                                        $('.custom-popup-attribute').children().last('div').find('ul').append('<li><label><input type="radio" class="attr_colors popup_product_attr" name="popup_attribute_'+attr_key+'" value="'+a_t_value+'"><a href="javascript:void(0)" class="active" style="background:'+a_t_value.toLowerCase()+'" title="'+a_t_value+'"></a></label></li>');
+                                                    });
+                                                }
+                                            } else {
+                                                $('.custom-popup-attribute').append('<div class="modal-size">'+
+                                                                                        '<h4>'+attr_key+'</h4>'+
+                                                                                    '</div>');
+                                                if(attr_value.length != 0){
+                                                    $.each(attr_value, function(a_t_key1, a_t_value1){
+                                                        $('.custom-popup-attribute').children().last('div').append('<label style="cursor: pointer;"><input type="radio" class="popup_product_attr" name="popup_attribute_'+attr_key+'" value="'+a_t_value1+'"><strong style="margin-right: 5px;"><span class="badge badge-secondary">'+a_t_value1+'</span></strong></label>');
+                                                    });
+                                                }
+                                            }
+                                        });
+                                    }
+                                }
+
+                                $('input[name="popup_productId"]').val(data.get_product_details.id);
+
+                            } else {
+                                $('.modal-inner-area-after-loading').html('<div class="col-lg-12 col-md-12"><h2>No details found...</h2></div>');
+                            }
+                        }
+                    }
+                });
+            });
+        });
+
+    </script>
+
+	<!-- all plugins JS hear -->
+    {# <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> #}
+{# <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> #}
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	{# <script type="text/javascript" src="{{ base_url() }}/js/popper.min.js"></script> #}
+	{# <script type="text/javascript" src="{{ base_url() }}/js/bootstrap.min.js"></script> #}
+	{# <script type="text/javascript" src="{{ base_url() }}/js/slick.min.js"></script> #}
+	{# <script type="text/javascript" src="{{ base_url() }}/js/owl.carousel.min.js"></script> #}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="{{ base_url() }}/js/jquery.mainmenu.js"></script>
+	<script type="text/javascript" src="{{ base_url() }}/js/ajax-email.js"></script>
+	<script type="text/javascript" src="{{ base_url() }}/js/plugins.js"></script>
+
+	<!-- main JS -->
+	<script type="text/javascript" src="{{ base_url() }}/js/main.js"></script>
+
+	<!-- Bootstrap toggle -->
+	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+    <!-- Bootbox Js -->
+    <script type="text/javascript" src="{{ base_url() }}/js/bootbox.min.js"></script>
+    <script type="text/javascript" src="{{ base_url() }}/js/bootbox.locales.min.js"></script>
+
+    <!-- Custom Js -->
+    <script type="text/javascript" src="{{ base_url() }}/js/myCustom.js"></script>
+
+</body>
+</html>
