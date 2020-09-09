@@ -52,12 +52,12 @@
                                 <!-- top-dropdown start -->
                                 <div class="top-dropdown">
                                     <ul>
-                                        <li class="drodown-show"><a href="#">USD <i class="fa fa-angle-down"></i></a>
+                                        <li class="drodown-show"><a href="#"><span class="main-currency-symbol">{{ currency_shortcode }}</span> <i class="fa fa-angle-down"></i></a>
                                             <ul class="open-dropdown">
-                                                <li><a href="#"> ₹ Rupees</a></li>
-                                                <li><a href="#"> € Euro</a></li>
-                                                <li><a href="#"> $ US Dollar</a></li>
-                                                <li><a href="#"> £ Pound</a></li>
+                                                <li class="currency_change" data-symbol="INR"><a href="javascript:void(0)"> ₹ Rupees</a></li>
+                                                <li class="currency_change" data-symbol="USD"><a href="javascript:void(0)"> $ US Dollar</a></li>
+                                                <li class="currency_change" data-symbol="EUR"><a href="javascript:void(0)"> € Euro</a></li>
+                                                <li class="currency_change" data-symbol="GBP"><a href="javascript:void(0)"> £ Pound</a></li>
                                             </ul>
                                         </li>
                                         <li class="drodown-show"><a href="#">English <i class="fa fa-angle-down"></i></a>
@@ -70,9 +70,9 @@
                                 </div>
                                 <!-- top-dropdown end -->
                                 <!-- shopping-cart start -->
-                                {# <div class="shopping-cart">
+                                <div class="shopping-cart">
                                     <ul>
-                                        <li><a href="javascript:void(0)"><span class="shpping-cart-text">Your bag: Total &#x20b9;<span id="custom-bag-total">3</span> </span><span class="item-total custom-item-total">3</span></a>
+                                        <li><a href="javascript:void(0)"><span class="shpping-cart-text">Your bag: Total &#x20b9;<span id="custom-bag-total">649.98</span> </span><span class="item-total custom-item-total">2</span></a>
                                             <!-- shopping-cart-wrapper start -->
                                             <div class="shopping-cart-wrapper open-dropdown">
                                                 <ul class="custom-cart-items">
@@ -84,7 +84,7 @@
                                                         <div class="shoping-product-details">
                                                             <h3>Autumn on the new middle-aged men's clothes hot V-neck long-sleeved sweater</h3>
                                                             <div class="cart-product-price">
-                                                                <span>$16.51</span>
+                                                                <span>₹399.99</span>
                                                             </div>
                                                             <div class="product-size"><span><strong>Size</strong>: S</span></div>
                                                             <div class="product-color">
@@ -100,7 +100,7 @@
                                                         <div class="shoping-product-details">
                                                             <h3>Contracted casual fashion Men sweater free shipping</h3>
                                                             <div class="cart-product-price">
-                                                                <span>$25.99</span>
+                                                                <span>₹249.99</span>
                                                             </div>
                                                             <div class="product-size"><span><strong>Size</strong>: S</span></div>
                                                             <div class="product-color">
@@ -110,10 +110,10 @@
                                                     </li>
                                                     <li>
                                                         <div class="cart-total">
-                                                            <h5>Subtotal<span class="float-right custom-cart-subtotal">&#x20b9;0.00</span></h5>
+                                                            <h5>Subtotal<span class="float-right custom-cart-subtotal">&#x20b9;649.98</span></h5>
                                                             <h5>Shipping<span class="float-right">&#x20b9;0.00</span></h5>
                                                             <h5>Taxes<span class="float-right">&#x20b9;0.00</span></h5>
-                                                            <h5>Total<span class="float-right custom-cart-total">&#x20b9;0.00</span></h5>
+                                                            <h5>Total<span class="float-right custom-cart-total">&#x20b9;649.98</span></h5>
                                                         </div>
                                                     </li>
                                                 </ul>
@@ -124,7 +124,7 @@
                                             <!-- shopping-cart-wrapper end -->
                                         </li>
                                     </ul>
-                                </div> #}
+                                </div>
                                 <!-- shopping-cart end -->
                             </div>
                         </div>
@@ -139,7 +139,7 @@
                         <div class="col-lg-6 col-md-6 col-xs-12">
                             <!-- logo start -->
                             <div class="logo">
-                                <a href="/"><img src="{{ base_url() }}/img/logo/2dFaLogo1435.png" style="width: 175px;margin: 5px;" alt=""></a>
+                                <a href="{{ base_url() }}"><img src="{{ base_url() }}/img/logo/essence_basket_logo.png" style="width: 175px;margin: 5px;" alt=""></a>
                             </div>
                             <!-- logo end -->
                         </div>
@@ -147,9 +147,9 @@
                             <div class="mid-right-wrapper">
                                 <div class="user-info-top">
                                     <ul>
-                                        <li><a href="#">Welcome, Guest</a></li>
-                                        <li><a href="/login-register">Sign in</a></li>
-                                        <li><a href="/cart-checkout" class="checkout">Checkout</a></li>
+                                        <li><a href="javascript:void(0)">Welcome, Guest</a></li>
+                                        <li><a href="javascript:void(0)">Sign in</a></li>
+                                        <li><a href="javascript:void(0)" class="checkout">Checkout</a></li>
                                     </ul>
                                 </div>
                                 <div class="search-area">
@@ -172,7 +172,7 @@
                             <div class="main-menu menu-style-two display-none">
                                 <nav>
                                      <ul>
-                                        <li class="active"><a href="/">Home</a></li>
+                                        <li class="active"><a href="{{ base_url() }}">Home</a></li>
                                     </ul>
 
                                 </nav>
@@ -186,7 +186,7 @@
                                 <div class="mobile-menu">
                                     <nav id="mobile-menu-active">
                                         <ul style="border-left: 1px solid #ccc; border-right: 1px solid #ccc;">
-                                            <li class="active"><a href="/">Home</a></li>
+                                            <li class="active"><a href="{{ base_url() }}">Home</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -305,10 +305,9 @@
                                         <div class="footer-content-info">
                                             <ul>
                                                 <li class="footer-contact"><i class="fa fa-map-marker"></i>R/n 17, Plot no. 305, Kolsa bunder, Darukhana, Reay Road, Mumbai - 400010.</li>
-                                                <li class="footer-contact"><i class="fa fa-phone"></i>(+91) 7977163926</li>
-                                                <li class="footer-contact"><i class="fa fa-phone"></i>(+91) 9167921715</li>
-                                                <!-- <li class="footer-contact"><i class="fa fa-fax"></i>9876543210</li> -->
-                                                <li class="footer-contact"><i class="fa fa-envelope"></i>info@2daysfashion.in</li>
+                                                <li class="footer-contact"><i class="fa fa-phone"></i>(+91) 7738138380</li>
+                                                <li class="footer-contact"><i class="fa fa-phone"></i>(+91) 9322745968</li>
+                                                <li class="footer-contact"><i class="fa fa-envelope"></i>info@essencebasket.com</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -320,11 +319,11 @@
                                         </div>
                                         <div class="footer-content-info">
                                             <ul>
-                                                <li><a href="/shop">Shop</a></li>
-                                                <li><a href="/about-us">About us</a></li>
-                                                <li><a href="/contact-us">Contact Us</a></li>
-                                                <li><a href="/login-register">Login/Signup</a></li>
-                                                <li><a href="/my-account">My account</a></li>
+                                                <li><a href="{{ base_url() }}">Shop</a></li>
+                                                <li><a href="{{ base_url() }}/about-us">About us</a></li>
+                                                <li><a href="{{ base_url() }}/contact-us">Contact Us</a></li>
+                                                <li><a href="{{ base_url() }}/login-register">Login/Signup</a></li>
+                                                <li><a href="{{ base_url() }}/my-account">My account</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -353,12 +352,12 @@
                                         </div>
                                         <div class="footer-content-info">
                                             <ul>
-                                                <li><a href="/FAQS">FAQ</a></li>
-                                                <li><a href="/TERMS-N-CONDITIONS" target="_blank">Delivery Information</a></li>
-                                                <li><a href="/CANCEL-AND-RETURN-POLICY" target="_blank">Cancel & Return Policy</a></li>
-                                                <li><a href="/CANCEL-AND-RETURN-POLICY" target="_blank">Payment Policy</a></li>
-                                                <li><a href="/PRIVACY-POLICY" target="_blank">Privacy Policy</a></li>
-                                                <li><a href="/TERMS-N-CONDITIONS" target="_blank">Terms & Conditions</a></li>
+                                                <li><a href="{{ base_url() }}/FAQS">FAQ</a></li>
+                                                <li><a href="{{ base_url() }}/TERMS-N-CONDITIONS" target="_blank">Delivery Information</a></li>
+                                                <li><a href="{{ base_url() }}/CANCEL-AND-RETURN-POLICY" target="_blank">Cancel & Return Policy</a></li>
+                                                <li><a href="{{ base_url() }}/CANCEL-AND-RETURN-POLICY" target="_blank">Payment Policy</a></li>
+                                                <li><a href="{{ base_url() }}/PRIVACY-POLICY" target="_blank">Privacy Policy</a></li>
+                                                <li><a href="{{ base_url() }}/TERMS-N-CONDITIONS" target="_blank">Terms & Conditions</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -402,7 +401,7 @@
                                 <img src="{{ base_url() }}/img/brand/payumoney.png" alt="">
                             </div>
                             <div class="copy-right" style="margin-top: 10px;">
-                                <p>Copyright &copy; <a href="#">Essence Basket </a> | All Rights Reserved | A trusted online shopping website.</p>
+                                <p>Copyright &copy; <a href="{{ base_url() }}">Essence Basket </a> | All Rights Reserved | A trusted online shopping website.</p>
                                 <!-- <p>A trusted online shopping website.</p> -->
                             </div>
                         </div>
@@ -530,9 +529,19 @@
     <!--Custom JS for countdown-->
     <script>
         $(document).ready(function() {
+            $('#search_txt_field').keypress(function (e) {
+                var key = e.which;
+                if(key == 13)  // the enter key code
+                {
+                    var cat_name = $(this).val().trim();
+                    //alert(cat_name);
+                    window.location.href = "{{ base_url() }}/"+cat_name;
+                    return false;
+                }
+            });
             $('#search_cat_btn').click(function(){
             	var cat_name = $('#search_txt_field').val().trim();
-            	window.location.href = "/shop/"+cat_name;
+            	window.location.href = "{{ base_url() }}/"+cat_name;
             });
 
             $('.meanmenu-reveal').css({'width': '-webkit-fill-available', 'padding-left': '90%'});
@@ -545,169 +554,13 @@
                     $('#hurry-up-alert').show();
                 }
             });
-
-            $('.cart-plus-minus-box').on('input focusout', function(){
-                if($(this).val() == 0){
-                    $(this).val('');
-                }
-            });
-
-            $(".cart-plus-minus-box").inputFilter(function(value) {
-                return /^\d*$/.test(value);
-            });
-
-            $(document).on('click', '.quick-view', function(){
-                var productId = $(this).attr('data-productId');
-                // alert(productId);
-                $('#productModal').modal('show');
-                $('.modal-inner-area-before-loading').show();
-                $('.modal-inner-area-after-loading').hide();
-
-                $.ajax({
-                    type: 'POST',
-                    dataType : "json",
-                    data : {'productId': productId, "_token": ""},
-                    url: "/product-popup",
-                    error:function(e){
-                        // console.log(e.responseJSON.error);
-                        if(e.responseJSON.error == true){
-                            if(e.responseJSON.message != null){
-                                $('.modal-inner-area-after-loading').html('<div class="col-lg-12 col-md-12"><h2>'+e.responseJSON.message+'</h2></div>');
-                            }
-                        }
-                    },
-                    complete: function(){
-                        $('.modal-inner-area-before-loading').hide();
-                        $('.modal-inner-area-after-loading').show();
-                    },
-                    success: function(data){
-                        // console.log(data);
-                        // alert(data.get_product_details.length);
-                        if(data.success == true){
-                            $('.popup-add-to-cart-dump').html('');
-                            if(data.get_product_details != 0){
-                                var no_img = 'assets/img/no_product_photo.jpg';
-                                var set_images = [];
-                                if(data.get_product_details.featured_img != ''){
-                                    set_images.push('fashionFiles/productFiles/'+data.get_product_details.featured_img);
-                                }
-                                if(data.get_product_details.gallery != ''){
-                                    $.each(data.get_product_details.gallery, function(gallery_key, gallery_value){
-                                        set_images.push('fashionFiles/productFiles/'+gallery_value);
-                                    });
-                                }
-                                $('.custom-large-thum-image').html('');
-                                $('.custom-product-small-thum').html('');
-                                if(set_images != ''){
-                                    $.each(set_images, function(image_key, image_value){
-                                        if(image_key == 0){
-                                            $('.custom-large-thum-image').append('<div role="tabpanel" class="tab-pane active" id="Thumb'+image_key+'">'+
-                                                                                '<img src="/'+image_value+'" alt="">'+
-                                                                            '</div>');
-                                            $('.custom-product-small-thum').append('<li role="presentation" class="active"><a href="#Thumb'+image_key+'" data-toggle="tab"><img src="/'+image_value+'" alt=""></a></li>');
-                                        } else {
-                                            $('.custom-large-thum-image').append('<div role="tabpanel" class="tab-pane" id="Thumb'+image_key+'">'+
-                                                                                '<img src="/'+image_value+'" alt="">'+
-                                                                            '</div>');
-                                            $('.custom-product-small-thum').append('<li role="presentation"><a href="#Thumb'+image_key+'" data-toggle="tab"><img src="/'+image_value+'" alt=""></a></li>');
-                                        }
-                                    });
-                                } else {
-                                    $('.custom-large-thum-image').append('<div role="tabpanel" class="tab-pane active" id="Thumb1">'+
-                                                                        '<img src="/'+no_img+'" alt="" style="width:100%;">'+
-                                                                    '</div>');
-                                    $('.custom-product-small-thum').append('<li role="presentation" class="active"><a href="#Thumb1" data-toggle="tab"><img src="/'+no_img+'" alt=""></a></li>');
-                                }
-
-                                if(data.get_product_details.name != ''){
-                                    $('.custom-popup-product-title').html(data.get_product_details.name);
-                                } else {
-                                    $('.custom-popup-product-title').html('Not defined');
-                                }
-
-                                if(data.get_product_details.short_description != ''){
-                                    $('.custom-popup-product-description').html(data.get_product_details.short_description);
-                                } else {
-                                    if(data.get_product_details.long_description != ''){
-                                        $('.custom-popup-product-description').html(data.get_product_details.long_description);
-                                    } else {
-                                        $('.custom-popup-product-description').html('Not defined');
-                                    }
-                                }
-
-                                var product_price_box_template = '';
-                                if((data.get_product_details.offer_type == 'percent') && (data.get_product_details.offer_starts <= data.get_product_details.date_now)){
-                                    product_price_box_template = '<div class="old-price">&#x20b9;'+data.get_product_details.price+'</div>'+
-                                                                '<div class="new-price">&#x20b9;'+data.get_product_details.offer_price+' <span class="discount">'+data.get_product_details.offer_percent+'% Off</span></div>';
-                                } else if((data.get_product_details.offer_type == 'buyget') && (data.get_product_details.offer_starts <= data.get_product_details.date_now)){
-                                    product_price_box_template = '<div class="new-price">&#x20b9;'+data.get_product_details.price+' <span class="discount">'+data.get_product_details.offer_text+'</span></div>';
-                                } else {
-                                    product_price_box_template = '<div class="new-price">&#x20b9;'+data.get_product_details.price+'</div>';
-                                }
-
-                                $('.custom-popup-price').html(product_price_box_template);
-
-                                if(data.get_product_details.status == 1){
-                                    $('.custom-popup-availability').html('Stock availability: '+
-                                                '<a href="javascript:void(0)" style="color: green;"><i class="fa fa-check-square" aria-hidden="true"></i> In Stock</a>');
-                                    $('.trigger-buy-now').css({'opacity': '1', 'cursor': 'pointer'});
-                                    $('.trigger-add-cart').css({'opacity': '1', 'cursor': 'pointer'});
-                                } else {
-                                    $('.custom-popup-availability').html('Stock availability: '+
-                                                '<a href="javascript:void(0)" style="color: red;"><i class="fa fa-times-circle" aria-hidden="true"></i> Out of stock</a>');
-                                    $('.trigger-buy-now').css({'opacity': '0.7', 'cursor': 'no-drop'});
-                                    $('.trigger-add-cart').css({'opacity': '0.7', 'cursor': 'no-drop'});
-                                }
-
-                                $('.cart-plus-minus-box').val(1);
-
-                                $('.custom-popup-attribute').html('');
-                                if(data.get_product_details.isset_attributes != 0){
-                                    if((data.get_product_details.attributes != 'null') && (data.get_product_details.attributes != '')){
-                                        $.each(data.get_product_details.attributes, function(attr_key, attr_value){
-                                            if(attr_key == 'Color'){
-                                                $('.custom-popup-attribute').append('<div class="modal-color">'+
-                                                                                        '<h4>'+attr_key+'</h4>'+
-                                                                                        '<div class="color-list">'+
-                                                                                            '<ul></ul>'+
-                                                                                        '</div>'+
-                                                                                    '</div>');
-                                                if(attr_value.length != 0){
-                                                    $.each(attr_value, function(a_t_key, a_t_value){
-                                                        $('.custom-popup-attribute').children().last('div').find('ul').append('<li><label><input type="radio" class="attr_colors popup_product_attr" name="popup_attribute_'+attr_key+'" value="'+a_t_value+'"><a href="javascript:void(0)" class="active" style="background:'+a_t_value.toLowerCase()+'" title="'+a_t_value+'"></a></label></li>');
-                                                    });
-                                                }
-                                            } else {
-                                                $('.custom-popup-attribute').append('<div class="modal-size">'+
-                                                                                        '<h4>'+attr_key+'</h4>'+
-                                                                                    '</div>');
-                                                if(attr_value.length != 0){
-                                                    $.each(attr_value, function(a_t_key1, a_t_value1){
-                                                        $('.custom-popup-attribute').children().last('div').append('<label style="cursor: pointer;"><input type="radio" class="popup_product_attr" name="popup_attribute_'+attr_key+'" value="'+a_t_value1+'"><strong style="margin-right: 5px;"><span class="badge badge-secondary">'+a_t_value1+'</span></strong></label>');
-                                                    });
-                                                }
-                                            }
-                                        });
-                                    }
-                                }
-
-                                $('input[name="popup_productId"]').val(data.get_product_details.id);
-
-                            } else {
-                                $('.modal-inner-area-after-loading').html('<div class="col-lg-12 col-md-12"><h2>No details found...</h2></div>');
-                            }
-                        }
-                    }
-                });
-            });
         });
-
     </script>
 
 	<!-- all plugins JS hear -->
     {# <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> #}
-{# <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> #}
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    {# <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> #}
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	{# <script type="text/javascript" src="{{ base_url() }}/js/popper.min.js"></script> #}
 	{# <script type="text/javascript" src="{{ base_url() }}/js/bootstrap.min.js"></script> #}
 	{# <script type="text/javascript" src="{{ base_url() }}/js/slick.min.js"></script> #}

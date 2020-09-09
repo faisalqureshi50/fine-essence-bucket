@@ -2274,6 +2274,9 @@ body {
   margin: 5px 0 0;
   padding-bottom: 3px;
 }
+.category-sub-menu li.has-no-sub > a.active {
+  color: #ED2F59;
+}
 .category-sub-menu li.has-no-sub > a:hover,
 .category-sub-menu ul li.has-no-sub:hover {
   color: #ED2F59;
