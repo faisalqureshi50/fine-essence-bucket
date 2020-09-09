@@ -11,7 +11,7 @@ In the project directory, you can run:
 The above install command will install all the required libraries from composer.json file.<br />
 You will also see any lint errors in the console.
 
-## `Import database`
+### `Import database`
 
 In the package there's a `database` folder that contains the pre-populated data for testing.<br />
 Create database `sale_basket` in your local database.<br />
