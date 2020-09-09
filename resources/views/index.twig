@@ -397,6 +397,9 @@
         $(this).parent().parent().find('.main-currency-symbol').html(currencyShortcode);
         $(this).parent().parent().find('a.active').removeClass('active');
         $(this).parent().css('display', 'none');
+        $('html, body').animate({
+            'scrollTop' : $(".shop-page-main-content").offset().top
+        });
         convertCurrency(currencyShortcode);
     });
 

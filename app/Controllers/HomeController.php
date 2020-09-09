@@ -49,7 +49,7 @@ class HomeController extends BaseController
 		if(!empty($request -> getParam('category'))){
 			$category = $request -> getParam('category');
 		}
-		// echo "Cats: ".$category.";die;
+		// echo "Cats: ".$category;die;
 
 		$orderBy_column = 'id';
 		$orderBy_order = 'asc';
